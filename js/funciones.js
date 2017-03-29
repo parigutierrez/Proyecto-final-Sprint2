@@ -29,13 +29,22 @@ function crearBotonTarea(){
 function crearTarea(){
   var idList = document.createAttribute("id");
   idList.value = "idDeLista";
-  console.log(idList);
+//  console.log(idList);
 //Creando el nuevo input para guardar elementos en la lista
 var inputList = document.createElement("input");
 var textoInput = document.createTextNode("");
 inputList.appendChild(textoInput);
 document.body.appendChild(inputList);
+var idInput = document.createAttribute("id");
+idInput.value = "idInput";
 
-
+agregarElementosLista();
 
 }
+function agregarElementosLista(){
+    var elemento = document.createElement('li');
+    var textoLi = document.getElementById('idInput').value;
+    var name = document.createTextNode(textoLi);
+    elemento.appendChild(name);
+    document.body.appendChild(elemento);
+  }
