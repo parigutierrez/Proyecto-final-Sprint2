@@ -19,11 +19,23 @@ function crearBotonTarea(){
     var texto = document.createTextNode("Agregar tarea"); // Se asigna el texto que muestra el botón
     btn.appendChild(texto); // Se agrega como hijo ese texto al botón
     document.body.appendChild(btn); //Se muestra en el body el botón
+    var idBoton = document.createAttribute("id");//Se crea el atributo id al botón Agregar tarea, para poder darle funcionalidad
+    idBoton.value = "idBoton"; //Se guarda el id en el elemento
+    //console.log(idBoton);  --Prueba de funcionalidad
+    crearTarea();
 }
-  
-
+//document.getElementById("idBoton").onclick = crearTarea();
 
 function crearTarea(){
-  //Este me sirve para crear tarea
-  //document.getElementById('lista').appendChild(li);
+  var idList = document.createAttribute("id");
+  idList.value = "idDeLista";
+  console.log(idList);
+//Creando el nuevo input para guardar elementos en la lista
+var inputList = document.createElement("input");
+var textoInput = document.createTextNode("");
+inputList.appendChild(textoInput);
+document.body.appendChild(inputList);
+
+
+
 }
